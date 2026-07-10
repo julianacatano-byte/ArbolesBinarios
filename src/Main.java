@@ -1,13 +1,18 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+public class Main{
+    public static void main (String[] args){
+        Arbol arbol = new Arbol();
+        arbol.raiz = new Nodo('A');
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+        arbol.raiz.izquierdo = new Nodo('B');
+        arbol.raiz.derecho = new Nodo('C');
+        arbol.raiz.izquierdo.izquierdo = new Nodo('D');
+        arbol.raiz.izquierdo.derecho = new Nodo ('E');
+        arbol.raiz.derecho.izquierdo= new Nodo ('F');
+        arbol.raiz.derecho.derecho = new Nodo ('G');
+        arbol.raiz.izquierdo.izquierdo.izquierdo = new Nodo('H');
+        arbol.raiz.izquierdo.izquierdo.derecho = new Nodo('I');
+        arbol.raiz.izquierdo.derecho.derecho= new Nodo('J');
+
+        arbol.PreOrder(arbol.raiz);
     }
 }
