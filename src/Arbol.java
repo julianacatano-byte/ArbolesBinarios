@@ -1,11 +1,11 @@
 public class Arbol {
     Nodo raiz;
-    public void PreOrder(Nodo nodo){
+    public void InOrder(Nodo nodo){
         if( nodo == null){
             return;
         }
-        System.out.print(nodo.dato + " ");
-        PreOrder(nodo.izquierdo);
-        PreOrder(nodo.derecho);
+        InOrder(nodo.izquierdo);
+        System.out.print(nodo.dato+" ");
+        InOrder(nodo.derecho);
     }
 }
