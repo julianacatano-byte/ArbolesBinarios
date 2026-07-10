@@ -13,6 +13,6 @@ public class Main{
         arbol.raiz.izquierdo.izquierdo.derecho = new Nodo('I');
         arbol.raiz.izquierdo.derecho.derecho= new Nodo('J');
 
-        arbol.InOrder(arbol.raiz);
+        arbol.PostOrder(arbol.raiz);
     }
 }
